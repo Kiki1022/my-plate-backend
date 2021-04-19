@@ -4,7 +4,8 @@ class CreateMeals < ActiveRecord::Migration[6.0]
       t.string :img_src
       t.string :location
       t.text :caption
-
+      t.boolean :vegan
+      t.boolean :gluten_free
       t.timestamps
     end
   end

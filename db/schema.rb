@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 2021_04_19_175508) do
     t.string "img_src"
     t.string "location"
     t.text "caption"
+    t.boolean "vegan"
+    t.boolean "gluten_free"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
