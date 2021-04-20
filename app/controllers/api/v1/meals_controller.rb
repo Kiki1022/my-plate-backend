@@ -18,7 +18,8 @@ class Api::V1::MealsController < ApplicationController
     end
 
     def show
-     #@meal = Meal.find(params[:id])   
+     #@meal = Meal.find(params[:id]) 
+       render json: @meal
     end
 
     def destroy
