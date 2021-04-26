@@ -9,6 +9,7 @@ class Api::V1::MealsController < ApplicationController
 
    
     def create
+        #binding.pry
         @meal = Meal.new(meal_params)
         if @meal.save
             render json: @meal
@@ -23,7 +24,8 @@ class Api::V1::MealsController < ApplicationController
     end
 
     def destroy
-      #@meal = Meal.find(params[:id]) 
+        #binding.pry
+      @meal = Meal.find(params[:id]) 
       @meal.destroy   
     end
 
@@ -34,7 +36,7 @@ class Api::V1::MealsController < ApplicationController
     end
 
     def meal_params
-        params.require(:meal).permit(:img_src, :location, :caption, :vegan, :gluten_free)
+        params.require(:meal).permit(:img_src, :location, :caption)
     end
 
 end
