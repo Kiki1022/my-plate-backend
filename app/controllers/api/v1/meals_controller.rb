@@ -25,7 +25,6 @@ class Api::V1::MealsController < ApplicationController
 
     def destroy
         #binding.pry
-      @meal = Meal.find(params[:id]) 
       @meal.destroy   
     end
 
